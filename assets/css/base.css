@@ -1,3 +1,148 @@
+@font-face {
+  font-family: 'font-1';
+  src: url("fonts/Akronim/Akronim-Regular.ttf") format("truetype");
+  font-weight: 400; }
+
+@font-face {
+  font-family: 'font-2';
+  src: url("fonts/Anton/Anton-Regular.ttf") format("truetype");
+  font-weight: 400; }
+
+@font-face {
+  font-family: 'font-3';
+  src: url("fonts/Audiowide/Audiowide-Regular.ttf") format("truetype");
+  font-weight: 400; }
+
+@font-face {
+  font-family: 'font-4';
+  src: url("fonts/Bonbon/Bonbon-Regular.ttf") format("truetype");
+  font-weight: 400; }
+
+@font-face {
+  font-family: 'font-5';
+  src: url("fonts/CabinSketch/CabinSketch-Regular.ttf") format("truetype");
+  font-weight: 400; }
+
+@font-face {
+  font-family: 'font-5';
+  src: url("fonts/CabinSketch/CabinSketch-Bold.ttf") format("truetype");
+  font-weight: 700; }
+
+@font-face {
+  font-family: 'font-6';
+  src: url("fonts/Chewy/Chewy.ttf") format("truetype");
+  font-weight: 400; }
+
+@font-face {
+  font-family: 'font-7';
+  src: url("fonts/Creepster/Creepster-Regular.ttf") format("truetype");
+  font-weight: 400; }
+
+@font-face {
+  font-family: 'font-8';
+  src: url("fonts/Damion/Damion-Regular.ttf") format("truetype");
+  font-weight: 400; }
+
+@font-face {
+  font-family: 'font-9';
+  src: url("fonts/Dancing_Script/DancingScript-Regular.ttf") format("truetype");
+  font-weight: 400; }
+
+@font-face {
+  font-family: 'font-9';
+  src: url("fonts/Dancing_Script/DancingScript-Bold.ttf") format("truetype");
+  font-weight: 700; }
+
+@font-face {
+  font-family: 'font-10';
+  src: url("fonts/Ewert/Ewert-Regular.ttf") format("truetype");
+  font-weight: 400; }
+
+@font-face {
+  font-family: 'font-11';
+  src: url("fonts/Fontdiner_Swanky/FontdinerSwanky-Regular.ttf") format("truetype");
+  font-weight: 400; }
+
+@font-face {
+  font-family: 'font-12';
+  src: url("fonts/GFS_Didot/GFSDidot-Regular.ttf") format("truetype");
+  font-weight: 400; }
+
+@font-face {
+  font-family: 'font-13';
+  src: url("fonts/Geostar/Geostar-Regular.ttf") format("truetype");
+  font-weight: 400; }
+
+@font-face {
+  font-family: 'font-14';
+  src: url("fonts/Geostar_Fill/GeostarFill-Regular.ttf") format("truetype");
+  font-weight: 400; }
+
+@font-face {
+  font-family: 'font-15';
+  src: url("fonts/Gloria_Hallelujah/GloriaHallelujah.ttf") format("truetype");
+  font-weight: 400; }
+
+@font-face {
+  font-family: 'font-16';
+  src: url("fonts/Hanalei/Hanalei-Regular.ttf") format("truetype");
+  font-weight: 400; }
+
+@font-face {
+  font-family: 'font-17';
+  src: url("fonts/Henny_Penny/HennyPenny-Regular.ttf") format("truetype");
+  font-weight: 400; }
+
+@font-face {
+  font-family: 'font-18';
+  src: url("fonts/Kaushan_Script/KaushanScript-Regular.ttf") format("truetype");
+  font-weight: 400; }
+
+@font-face {
+  font-family: 'font-19';
+  src: url("fonts/Monoton/Monoton-Regular.ttf") format("truetype");
+  font-weight: 400; }
+
+@font-face {
+  font-family: 'font-20';
+  src: url("fonts/Nosifer/Nosifer-Regular.ttf") format("truetype");
+  font-weight: 400; }
+
+@font-face {
+  font-family: 'font-21';
+  src: url("fonts/Pacifico/Pacifico-Regular.ttf") format("truetype");
+  font-weight: 400; }
+
+@font-face {
+  font-family: 'font-22';
+  src: url("fonts/Permanent_Marker/PermanentMarker.ttf") format("truetype");
+  font-weight: 400; }
+
+@font-face {
+  font-family: 'font-23';
+  src: url("fonts/Righteous/Righteous-Regular.ttf") format("truetype");
+  font-weight: 400; }
+
+@font-face {
+  font-family: 'font-24';
+  src: url("fonts/Rock_Salt/RockSalt.ttf") format("truetype");
+  font-weight: 400; }
+
+@font-face {
+  font-family: 'font-25';
+  src: url("fonts/Sacramento/Sacramento-Regular.ttf") format("truetype");
+  font-weight: 400; }
+
+@font-face {
+  font-family: 'font-26';
+  src: url("fonts/Satisfy/Satisfy-Regular.ttf") format("truetype");
+  font-weight: 400; }
+
+@font-face {
+  font-family: 'font-27';
+  src: url("fonts/Shadows_Into_Light/ShadowsIntoLight.ttf") format("truetype");
+  font-weight: 400; }
+
 * {
   font-family: "Comic Sans MS", monospace;
   font-size: 10px;
