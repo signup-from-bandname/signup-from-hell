@@ -18,6 +18,10 @@ h1 {
   font-size: 27px;
 }
 
+.hidden {
+  display: none !important;
+}
+
 // rainbow all the things
 .rainbow-color {
   -webkit-animation:rainbow-color 1s infinite;

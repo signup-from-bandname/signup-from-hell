@@ -237,6 +237,9 @@ body.rainbow-background {
 h1 {
   font-size: 27px; }
 
+.hidden {
+  display: none !important; }
+
 .rainbow-color {
   -webkit-animation: rainbow-color 1s infinite;
   animation: rainbow-color 1s infinite; }
