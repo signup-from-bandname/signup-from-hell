@@ -1,8 +1,8 @@
-###Ideen:
+# Ideen
 
 In der Tabelle die Ideen, die umgesetzt wurden mit der **ID aus dem HTML** markieren, damit wir einen Überblick haben.
 
-#####Generell
+## Generell
 * Keine Pflichtfelder, keine optionalen Felder, keine nachvollziehbare Ordnung
 * Zeit messen! Sichtbarer timer!
 
