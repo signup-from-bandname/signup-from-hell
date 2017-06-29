@@ -1,0 +1,19 @@
+{
+  "name": "signup-from-hell",
+  "version": "1.0.0",
+  "description": "please sign up, it just take a few minutes. maybe.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/signup-from-bandname/signup-from-hell.git"
+  },
+  "author": "wir",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/signup-from-bandname/signup-from-hell/issues"
+  },
+  "homepage": "https://github.com/signup-from-bandname/signup-from-hell#readme"
+}
