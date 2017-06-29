@@ -4,7 +4,11 @@
   "description": "please sign up, it just take a few minutes. maybe.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "npm run scss-compile",
+
+    "scss-compile": "node-sass -rw assets/scss -o assets/css",
+
+    "watch": "npm run scss-compile"
   },
   "repository": {
     "type": "git",
@@ -12,8 +16,8 @@
   },
   "author": "wir",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/signup-from-bandname/signup-from-hell/issues"
-  },
-  "homepage": "https://github.com/signup-from-bandname/signup-from-hell#readme"
+  "homepage": "https://signup-from-bandname.github.io/signup-from-hell",
+  "devDependencies": {
+    "node-sass": "^4.5.3"
+  }
 }
