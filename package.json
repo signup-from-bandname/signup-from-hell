@@ -4,10 +4,7 @@
   "description": "please sign up, it just take a few minutes. maybe.",
   "main": "index.js",
   "scripts": {
-    "test": "npm run scss-compile",
-
     "scss-compile": "node-sass -rw assets/scss -o assets/css",
-
     "watch": "npm run scss-compile"
   },
   "repository": {
