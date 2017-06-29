@@ -5,3 +5,7 @@ Usecase: Ein browserbasiertes Spiel, das die Frust-Resistenz des Spielers testet
 Hier können sich auch Designer austoben: Zu wenig Kontrast, zu kleine (oder zu große) Schrift, 21.000 verschiedene Webfonts, abgefahrene Farben, was immer in anderen Projekten nicht geht.
 
 Je nach Team Größe und Interessen könnten mehrere Seiten (Levels?) implementiert werden. Oder verschiedene Schwierigkeitsgrade (normale Levels kombiniert mit unlesbarer Schrift).
+
+---
+
+Implementierung: Eine index.html, beliebig JS und CSS.
