@@ -7,7 +7,10 @@ var init = function() {
 
 var checkForDevMode = function() {
   devmode = getParameterByName('devmode') || 0;
+
+
   if(parseInt(devmode) !== 0) {
+    $('body').removeClass('rainbow-background');
     console.log('DEV_MODE detected:', devmode)
   }
 };
