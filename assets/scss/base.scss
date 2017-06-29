@@ -14,18 +14,26 @@ body.rainbow-background {
   animation:rainbow-background 10s infinite;
 }
 
+h1 {
+  font-size: 27px;
+}
+
 // rainbow all the things
 .rainbow-color {
-  &:hover,
-  &:focus {
+  -webkit-animation:rainbow-color 1s infinite;
+  animation:rainbow-color 1s infinite;
+  &-hover:hover,
+  &-hover:focus {
     -webkit-animation:rainbow-color 1s infinite;
     animation:rainbow-color 1s infinite;
   }
 }
 
 .rainbow-background {
-  &:hover,
-  &:focus {
+  -webkit-animation:rainbow-background 1s infinite;
+  animation:rainbow-background 1s infinite;
+  &-hover:hover,
+  &-hover:focus {
     -webkit-animation:rainbow-background 1s infinite;
     animation:rainbow-background 1s infinite;
   }

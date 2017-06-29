@@ -143,6 +143,87 @@
   src: url("../fonts/Shadows_Into_Light/ShadowsIntoLight.ttf") format("truetype");
   font-weight: 400; }
 
+.font-1 {
+  font-family: font-1 !important; }
+
+.font-2 {
+  font-family: font-2 !important; }
+
+.font-3 {
+  font-family: font-3 !important; }
+
+.font-4 {
+  font-family: font-4 !important; }
+
+.font-5 {
+  font-family: font-5 !important; }
+
+.font-6 {
+  font-family: font-6 !important; }
+
+.font-7 {
+  font-family: font-7 !important; }
+
+.font-8 {
+  font-family: font-8 !important; }
+
+.font-9 {
+  font-family: font-9 !important; }
+
+.font-10 {
+  font-family: font-10 !important; }
+
+.font-11 {
+  font-family: font-11 !important; }
+
+.font-12 {
+  font-family: font-12 !important; }
+
+.font-13 {
+  font-family: font-13 !important; }
+
+.font-14 {
+  font-family: font-14 !important; }
+
+.font-15 {
+  font-family: font-15 !important; }
+
+.font-16 {
+  font-family: font-16 !important; }
+
+.font-17 {
+  font-family: font-17 !important; }
+
+.font-18 {
+  font-family: font-18 !important; }
+
+.font-19 {
+  font-family: font-19 !important; }
+
+.font-20 {
+  font-family: font-20 !important; }
+
+.font-21 {
+  font-family: font-21 !important; }
+
+.font-22 {
+  font-family: font-22 !important; }
+
+.font-23 {
+  font-family: font-23 !important; }
+
+.font-24 {
+  font-family: font-24 !important; }
+
+.font-25 {
+  font-family: font-25 !important; }
+
+.font-26 {
+  font-family: font-26 !important; }
+
+.font-27 {
+  font-family: font-27 !important; }
+
 * {
   font-family: "Comic Sans MS", monospace;
   font-size: 10px;
@@ -153,13 +234,22 @@ body.rainbow-background {
   -webkit-animation: rainbow-background 10s infinite;
   animation: rainbow-background 10s infinite; }
 
-.rainbow-color:hover, .rainbow-color:focus {
+h1 {
+  font-size: 27px; }
+
+.rainbow-color {
   -webkit-animation: rainbow-color 1s infinite;
   animation: rainbow-color 1s infinite; }
+  .rainbow-color-hover:hover, .rainbow-color-hover:focus {
+    -webkit-animation: rainbow-color 1s infinite;
+    animation: rainbow-color 1s infinite; }
 
-.rainbow-background:hover, .rainbow-background:focus {
+.rainbow-background {
   -webkit-animation: rainbow-background 1s infinite;
   animation: rainbow-background 1s infinite; }
+  .rainbow-background-hover:hover, .rainbow-background-hover:focus {
+    -webkit-animation: rainbow-background 1s infinite;
+    animation: rainbow-background 1s infinite; }
 
 .overlay {
   background: #fff;
@@ -227,6 +317,7 @@ body.rainbow-background {
   background: #5ab300;
   border-radius: 15px;
   box-shadow: rgba(0, 0, 0, 0.5) 2px 4px 5px inset, rgba(0, 0, 0, 0.3) 4px 2px 5px;
-  font-family: 'font-4';
+  display: inline-block;
+  font-family: 'font-3';
   font-size: 40px;
   padding: 10px 40px; }
