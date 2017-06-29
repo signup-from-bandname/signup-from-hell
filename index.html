@@ -7,28 +7,39 @@
   <script src="assets/js/app.js" type="application/javascript"></script>
 </head>
 <body>
-    <h1>hello world</h1>
+<div id="chrome-download" class="overlay">
+    <marquee><h1>Ihr Browser ist veraltet!</h1></marquee>
+    <p>Bitte aktualisieren Sie Ihren Browser, um sich erfolgreich zu registrieren.</p>
+    <a href="http://lmgtfy.com/?q=chrome">Download</a>
+</div>
+    <h1>Sign up!</h1>
 
 <div id="input1">
-    <input type="text" />
+    <label for="inputtype1">Name</label>
+    <input type="text" id="inputtype1" placeholder="Vorname" />
 </div>
     <div id="input2">
-        <input type="text" />
+        <label for="inputtype1">Name</label>
+        <input type="text" placeholder="Nachname" class="rainbow-color" />
     </div>
     <div id="input3">
-        <input type="text" />
+        <label>E-Mail-Adresse</label>
+        <input type="email" />
     </div>
     <div id="input4">
+        Straße, Hausnummer
         <input type="text" />
     </div>
     <div id="input5">
-        <input type="text" />
+        <input type="number" class="w-10" />
     </div>
     <div id="input6">
-        <input type="text" />
+        PLZ
+        <input type="number" />
     </div>
     <div id="input7">
-        <input type="text" />
+        Ort
+        <input type="text" readonly />
     </div>
     <div id="input8">
         <input type="text" />
