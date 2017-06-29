@@ -2,6 +2,7 @@ var devmode = 0;
 
 var init = function() {
   checkForDevMode();
+  randomizeTabIndex();
 };
 
 var checkForDevMode = function() {
@@ -11,7 +12,12 @@ var checkForDevMode = function() {
   }
 };
 
-
+var randomizeTabIndex = function() {
+  var inputs = document.querySelectorAll('input')
+  inputs.forEach(function(element) {
+    element.tabIndex = getRandomInt(0, inputs.length -1);
+  });
+};
 
 document.addEventListener("DOMContentLoaded", init);
 
@@ -32,3 +38,8 @@ var getParameterByName = function(name) {
   }
   return decodeURIComponent(results[2].replace(/\+/g, " "));
 };
+var getRandomInt = function(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min +1)) + min; 
+}
