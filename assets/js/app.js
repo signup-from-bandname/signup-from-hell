@@ -4,6 +4,7 @@ var fieldsets;
 var init = function() {
   closeChromeModal();
   initFieldsets();
+  beEasyFieldset();
   checkForDevMode();
   randomizeTabIndex();
   initCaptchasong();
@@ -27,7 +28,7 @@ function initPaging() {
 
 var closeChromeModal = function () {
   $('body').on('click', function() {
-    $('#chrome-download').hide();
+    document.querySelector('#chrome-download').classList.add('hidden');
   });
 };
 
@@ -43,17 +44,21 @@ var initFieldsets = function() {
     if (i !== len - 1) {
       var nextBtn = document.createElement('button');
       var textnode = document.createTextNode("weiter >");
+
       nextBtn.appendChild(textnode);
       nextBtn.classList.add('nextBtn');
       nextBtn.setAttribute('type', 'button');
       nextBtn.setAttribute('data-num', i.toString());
       nextBtn.setAttribute('disabled', 'disabled');
       nextBtn.addEventListener('click', function() {
-        var num = parseInt(this.getAttribute('data-num'));
-        var currentFieldset = document.querySelector('#fieldset' + num);
-        currentFieldset.classList.add('hidden');
-        var nextFieldset = document.querySelector('#fieldset' + (num + 1));
-        nextFieldset.classList.remove('hidden');
+        var fake = this.getAttribute('data-fake');
+        if (!fake) {
+          var num = parseInt(this.getAttribute('data-num'));
+          var currentFieldset = document.querySelector('#fieldset' + num);
+          currentFieldset.classList.add('hidden');
+          var nextFieldset = document.querySelector('#fieldset' + (num + 1));
+          nextFieldset.classList.remove('hidden');
+        }
       });
       _this.appendChild(nextBtn);
     }
@@ -90,6 +95,32 @@ var randomizeTabIndex = function() {
     element.tabIndex = getRandomInt(0, inputs.length -1);
   });
 };
+
+var beEasyFieldset = function () {
+  var target = document.querySelector('.everything-is-awesome');
+  var errorText = document.querySelector('.everything-is-awesome .error');
+  var inputs = document.querySelectorAll('.everything-is-awesome input');
+  var currentNextBtn = document.querySelector('.everything-is-awesome .nextBtn');
+
+  currentNextBtn.setAttribute('data-fake', 'true');
+  enableNextButton();
+  for (var i = 0; i < inputs.length; i++) {
+    var currentInput = inputs[i];
+
+    if (currentInput.value == '') {
+      errorText.classList.add('hidden');
+    }
+
+  }
+
+  currentNextBtn.addEventListener('click', function(event){
+    event.preventDefault();
+    console.log('do something')
+    currentNextBtn.removeAttribute('data-fake');
+    return false;
+   });
+  console.log(currentNextBtn);
+}
 
 var birthdayPicker = function () {
   $( "#birthday" ).datepicker();

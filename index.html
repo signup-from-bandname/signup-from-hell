@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="jp">
 <head>
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
   <meta charset="UTF-8">
   <title>Sign Up From Hell</title>
   <link href="assets/css/base.css" rel="stylesheet" />
   <link href="assets/css/vendor/jquery-ui.css" rel="stylesheet" />
   <script src="assets/js/captchas.js" type="application/javascript"></script>
   <script src="assets/js/app.js" type="application/javascript"></script>
-    <script src="assets/js/vendor/jquery.js"></script>
-    <script src="assets/js/vendor/jquery-ui.js"></script>
+  <script src="assets/js/vendor/jquery.js"></script>
+  <script src="assets/js/vendor/jquery-ui.js"></script>
 </head>
 <body class="rainbow-background">
   <div id="chrome-download" class="overlay font-24">
@@ -18,7 +20,11 @@
   </div>
   <h1>Sign up!</h1>
 
-  <fieldset>
+  <fieldset class="everything-is-awesome">
+    <div class="error hidden">
+      <h2>Fehler!</h2>
+      <p>Bitte überprüfe deine Eingaben.</p>
+    </div>
     <div>
       <label for="inputtype1">Name</label>
       <input type="text" id="inputtype1" placeholder="Name" />
