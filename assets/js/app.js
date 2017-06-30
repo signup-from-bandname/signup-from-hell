@@ -10,6 +10,7 @@ var init = function() {
   initCaptchasong();
   initCountthedogs();
   birthdayPicker();
+  initNummernCode();
   initPaging();
 };
 
@@ -63,6 +64,13 @@ var initFieldsets = function() {
       });
       _this.appendChild(nextBtn);
     }
+  }
+
+  var nopasteInputs = document.querySelectorAll('.nopaste');
+  for (i = 0; i < nopasteInputs.length; i++) {
+    nopasteInputs[i].addEventListener('paste', function(e) {
+      e.preventDefault();
+    });
   }
 };
 
@@ -150,6 +158,60 @@ var initCaptchasong = function() {
     } );
   }
 };
+
+var initNummernCode = function() {
+  var opPlus = document.querySelector('#nummernCode .operator .plus');
+  var opMinus = document.querySelector('#nummernCode .operator .minus');
+  var isPlus = true;
+  var input = document.querySelector('#nummernCode input');
+  var magicNumber = document.querySelector('#nummernCode .magicNumber').innerText;
+  var errorText = document.querySelector('#nummernCode .error');
+
+  var _toggle = function() {
+    isPlus = Math.random() >= 0.5;
+    if (isPlus) {
+      opPlus.classList.remove('hidden');
+      opMinus.classList.add('hidden');
+    } else {
+      opPlus.classList.add('hidden');
+      opMinus.classList.remove('hidden');
+    }
+  };
+
+  var _resolveCheck = function() {
+    if(input.value === magicNumber) {
+      clearInterval(intervalId);
+      enableNextButton();
+    }
+  };
+
+  var _interval = function() {
+    _toggle();
+    _resolveCheck();
+  };
+
+  var intervalId = setInterval(_interval, 2000);
+
+  var _inputManipulator = function(e) {
+    errorText.classList.add('hidden');
+    e.preventDefault();
+    if(isNaN(e.key)) {
+      e.target.value = '';
+      errorText.classList.remove('hidden');
+    } else {
+      var num = parseInt(e.key);
+      if(isPlus) {
+        num = num + 1;
+      } else {
+        num = num - 1;
+      }
+      e.target.value += num;
+    }
+  };
+
+  input.addEventListener('keypress', _inputManipulator)
+};
+
 
 /**
  * Funktion um vom aktuell aktiven Fieldset den "Weiter"-Button freizuschalten.
