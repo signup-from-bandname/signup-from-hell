@@ -1,4 +1,5 @@
-var devmode = 0;
+var devmode = false;
+var fieldsets;
 
 var init = function() {
   initFieldsets();
@@ -13,7 +14,7 @@ function initPaging() {
 }
 
 var initFieldsets = function() {
-  var fieldsets = document.querySelectorAll('fieldset');
+  fieldsets = document.querySelectorAll('fieldset');
   var len = fieldsets.length;
   for (var i = 0; i < len; i++) {
     var _this = fieldsets[i];
@@ -25,8 +26,10 @@ var initFieldsets = function() {
       var nextBtn = document.createElement('button');
       var textnode = document.createTextNode("weiter >");
       nextBtn.appendChild(textnode);
+      nextBtn.classList.add('nextBtn');
       nextBtn.setAttribute('type', 'button');
       nextBtn.setAttribute('data-num', i.toString());
+      nextBtn.setAttribute('disabled', 'disabled');
       nextBtn.addEventListener('click', function() {
         var num = parseInt(this.getAttribute('data-num'));
         var currentFieldset = document.querySelector('#fieldset' + num);
@@ -39,13 +42,27 @@ var initFieldsets = function() {
   }
 };
 
+/**
+ * Prüft ob als getParameter "devmode" angegeben wurde.
+ * Mit einem integer (z.B. "devmode=2") kann direkt das entsprechende Fieldset angesprungen werden.
+ */
 var checkForDevMode = function() {
-  devmode = getParameterByName('devmode') || 0;
+  devmode = getParameterByName('devmode') || false;
 
-
-  if(parseInt(devmode) !== 0) {
+  if(devmode) {
+    console.log('DEV_MODE detected:', devmode);
+    var num = parseInt(devmode);
+    if(!isNaN(num)) {
+      document.querySelector('#chrome-download').classList.add('hidden');
+      for (var i = 0; i < fieldsets.length; i++) {
+        if (i === num) {
+          fieldsets[i].classList.remove('hidden');
+        } else {
+          fieldsets[i].classList.add('hidden');
+        }
+      }
+    }
     $('body').removeClass('rainbow-background');
-    console.log('DEV_MODE detected:', devmode)
   }
 };
 
@@ -72,6 +89,14 @@ var initInput10 = function() {
     } );
 
   }
+};
+
+/**
+ * Funktion um vom aktuell aktiven Fieldset den "Weiter"-Button freizuschalten.
+ */
+var enableNextButton = function() {
+  var currentNextBtn = document.querySelector("fieldset:not(.hidden) .nextBtn");
+  currentNextBtn.removeAttribute('disabled');
 };
 
 document.addEventListener("DOMContentLoaded", init);
