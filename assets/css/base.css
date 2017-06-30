@@ -337,6 +337,17 @@ fieldset {
   100% {
     background: #ff0080; } }
 
+@keyframes pulsar {
+  0% {
+    transform: scale(1);
+    opacity: 1; }
+  50% {
+    transform: scale(1.15);
+    opacity: 0.7; }
+  100% {
+    transform: scale(1);
+    opacity: 1; } }
+
 .w-10 {
   overflow: hidden;
   width: 10px; }
@@ -371,3 +382,14 @@ fieldset {
     font-size: 30px;
     font-weight: bold;
     border: 1px solid currentColor; }
+
+#congrats {
+  -webkit-animation: pulsar 1.5s infinite;
+  animation: pulsar 1.5s infinite; }
+  #congrats * {
+    font-family: font-6 ,sans-serif;
+    font-size: 20px; }
+  #congrats h1 {
+    font-size: 30px; }
+  #congrats span {
+    color: red; }

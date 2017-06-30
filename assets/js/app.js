@@ -1,6 +1,6 @@
 var devmode = false;
 var fieldsets;
-var starttime;
+var starttime, stoptime;
 var timerIntervalId;
 
 var init = function() {
@@ -63,6 +63,11 @@ var initFieldsets = function() {
           currentFieldset.classList.add('hidden');
           var nextFieldset = document.querySelector('#fieldset' + (num + 1));
           nextFieldset.classList.remove('hidden');
+          // wenn letztes Fieldset!
+          if(num+1 === len-1) {
+            console.log("STOP");
+            stopTimer();
+          }
         }
       });
       _this.appendChild(nextBtn);
@@ -86,6 +91,7 @@ var initTimer = function() {
   var _updateTimer = function() {
     var now = new Date();
     var time = new Date(now - starttime);
+    stoptime = time;
     min.innerText = time.getMinutes();
     sec.innerText = time.getSeconds();
     msec.innerText = time.getMilliseconds();
@@ -93,6 +99,17 @@ var initTimer = function() {
   };
 
   timerIntervalId = setInterval(_updateTimer, 1);
+};
+
+var stopTimer = function() {
+  clearInterval(timerIntervalId);
+  var min = document.querySelector('#congrats .min');
+  var sec = document.querySelector('#congrats .sec');
+  var msec = document.querySelector('#congrats .msec');
+
+  min.innerText = stoptime.getMinutes();
+  sec.innerText = stoptime.getSeconds();
+  msec.innerText = stoptime.getMilliseconds();
 };
 
 /**

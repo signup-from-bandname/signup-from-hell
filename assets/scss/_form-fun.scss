@@ -45,3 +45,21 @@
     border: 1px solid currentColor;
   }
 }
+
+#congrats {
+  -webkit-animation: pulsar 1.5s infinite;
+  animation: pulsar 1.5s infinite;
+
+  * {
+    font-family: font-6 ,sans-serif;
+    font-size: 20px;
+  }
+
+  h1 {
+    font-size: 30px;
+  }
+
+  span {
+    color: red;
+  }
+}
