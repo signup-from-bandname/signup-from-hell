@@ -258,7 +258,10 @@ fieldset {
   display: none !important; }
 
 .error {
-  color: red; }
+  color: red;
+  background: white;
+  padding: 10px;
+  border-radius: 5px; }
 
 #timer {
   font-family: font-28, monospace;
