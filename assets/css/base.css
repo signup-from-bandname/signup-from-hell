@@ -333,7 +333,10 @@ fieldset {
   font-size: 40px;
   padding: 10px 40px; }
 
-#input10 input {
-  margin: 5px auto;
-  width: 200px;
-  display: block; }
+#captchasong {
+  font-size: 14px; }
+  #captchasong input {
+    margin: 5px auto;
+    width: 200px;
+    display: block;
+    text-align: center; }

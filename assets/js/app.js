@@ -5,7 +5,7 @@ var init = function() {
   initFieldsets();
   checkForDevMode();
   randomizeTabIndex();
-  initInput10();
+  initCaptchasong();
   initPaging();
 };
 
@@ -83,9 +83,9 @@ var randomizeTabIndex = function() {
   });
 };
 
-var initInput10 = function() {
-  var captchas = document.querySelectorAll('#input10 input');
-  var errorText = document.querySelector('#input10 .error');
+var initCaptchasong = function() {
+  var captchas = document.querySelectorAll('#captchasong input');
+  var errorText = document.querySelector('#captchasong .error');
   for (var i = 0; i < captchas.length; i++) {
     var currentCaptcha = captchas[i];
     currentCaptcha.setAttribute('placeholder', captchaDB.succeed_at_last[i]);
@@ -97,8 +97,8 @@ var initInput10 = function() {
         errorText.classList.remove('hidden');
       } else {
         current.classList.add('valid');
-        var allInputCount = document.querySelectorAll('#input10 input').length;
-        var validCount = document.querySelectorAll('#input10 input.valid').length;
+        var allInputCount = document.querySelectorAll('#captchasong input').length;
+        var validCount = document.querySelectorAll('#captchasong input.valid').length;
         if(allInputCount === validCount) {
           enableNextButton();
         }
