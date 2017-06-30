@@ -10,6 +10,7 @@
   <script src="assets/js/captchas.js" type="application/javascript"></script>
   <script src="assets/js/countthedogs.js" type="application/javascript"></script>
   <script src="assets/js/app.js" type="application/javascript"></script>
+  <script src="assets/js/piano.js" type="application/javascript"></script>
   <script src="assets/js/vendor/jquery.js"></script>
   <script src="assets/js/vendor/jquery-ui.js"></script>
 </head>
@@ -104,6 +105,23 @@
         <span class="minus hidden">-</span>
       </span>
       <div class="error hidden">Es sind nur Zahlen erlaubt!</div>
+    </div>
+  </fieldset>
+
+  <fieldset>
+    <div id="pipiano">
+      <select name="soundType" id="soundType" class="hidden">
+        <option value="triangle">Triangle</option>
+        <option value="sine">Sine</option>
+        <option value="square">Square</option>
+        <option value="sawtooth" selected>Sawtooth</option>
+      </select>
+      <div class="startWrapper">
+        <div>Bereit für die nächste Challenge? (ja/nein)</div>
+        <button type="button" class="start">Start</button>
+      </div>
+      <!-- Keyboard placeholder -->
+      <div id="pianoKeyboard"></div>
     </div>
   </fieldset>
 

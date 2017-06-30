@@ -267,7 +267,8 @@ fieldset {
   color: orange;
   display: inline-block;
   padding: 20px;
-  border: 3px solid currentColor; }
+  border: 3px solid currentColor;
+  border-radius: 15px; }
 
 .rainbow-color {
   -webkit-animation: rainbow-color 1s infinite;
@@ -444,3 +445,16 @@ fieldset {
 
 #fieldset2 .nextBtn {
   float: left; }
+
+#pipiano .key {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  margin: 10px;
+  background-color: lightgrey;
+  border: 2px solid darkgray;
+  border-radius: 10px; }
+  #pipiano .key.playing {
+    background-color: yellow; }
+  #pipiano .key span {
+    font-size: 16px; }
