@@ -16,8 +16,7 @@ function next() {
 function init() {
   console.log('doggies!')
 
-  var button = $('.countthedogs .nextBtn').attr('data-fake', 'true');
-  enableNextButton();
+  var button = $('.countthedogs .nextBtn').attr('data-fake', 'true').removeAttr('disabled');
 
   var counter = 0;
   $('.countthedogs img').click(function() {
