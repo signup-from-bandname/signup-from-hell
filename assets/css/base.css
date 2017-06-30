@@ -385,7 +385,8 @@ fieldset {
 
 #congrats {
   -webkit-animation: pulsar 1.5s infinite;
-  animation: pulsar 1.5s infinite; }
+  animation: pulsar 1.5s infinite;
+  text-shadow: 3px 3px 1px #969696; }
   #congrats * {
     font-family: font-6 ,sans-serif;
     font-size: 20px; }

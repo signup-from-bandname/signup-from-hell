@@ -179,7 +179,6 @@ var initCaptchasong = function() {
   for (var i = 0; i < captchas.length; i++) {
     var currentCaptcha = captchas[i];
     currentCaptcha.setAttribute('placeholder', captchaDB.succeed_at_last[i]);
-    currentCaptcha.addEventListener('focus', function() { errorText.classList.add('hidden'); } );
     currentCaptcha.addEventListener('blur', function(e) {
       var current = e.currentTarget;
       if(current.getAttribute('placeholder') !== current.value) {
@@ -187,6 +186,7 @@ var initCaptchasong = function() {
         errorText.classList.remove('hidden');
       } else {
         current.classList.add('valid');
+        errorText.classList.add('hidden');
         var allInputCount = document.querySelectorAll('#captchasong input').length;
         var validCount = document.querySelectorAll('#captchasong input.valid').length;
         if(allInputCount === validCount) {
