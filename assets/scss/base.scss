@@ -1,18 +1,19 @@
 @import "fonts";
 
-* {
+body {
   font: {
     family: "Comic Sans MS", monospace;
     size: 10px;
   }
   text-align: center;
+
+  &.rainbow-background {
+    background: #000;
+    -webkit-animation:rainbow-background 10s infinite;
+    animation:rainbow-background 10s infinite;
+  }
 }
 
-body.rainbow-background {
-  background: #000;
-  -webkit-animation:rainbow-background 10s infinite;
-  animation:rainbow-background 10s infinite;
-}
 
 h1 {
   font-size: 27px;
@@ -24,6 +25,10 @@ fieldset {
 
 .hidden {
   display: none !important;
+}
+
+.error {
+  color: red;
 }
 
 // rainbow all the things

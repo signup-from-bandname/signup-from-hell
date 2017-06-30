@@ -95,9 +95,15 @@ var initInput10 = function() {
       if(current.getAttribute('placeholder') !== current.value) {
         current.value = '';
         errorText.classList.remove('hidden');
+      } else {
+        current.classList.add('valid');
+        var allInputCount = document.querySelectorAll('#input10 input').length;
+        var validCount = document.querySelectorAll('#input10 input.valid').length;
+        if(allInputCount === validCount) {
+          enableNextButton();
+        }
       }
     } );
-
   }
 };
 

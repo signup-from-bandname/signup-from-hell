@@ -224,15 +224,14 @@
 .font-27 {
   font-family: font-27 !important; }
 
-* {
+body {
   font-family: "Comic Sans MS", monospace;
   font-size: 10px;
   text-align: center; }
-
-body.rainbow-background {
-  background: #000;
-  -webkit-animation: rainbow-background 10s infinite;
-  animation: rainbow-background 10s infinite; }
+  body.rainbow-background {
+    background: #000;
+    -webkit-animation: rainbow-background 10s infinite;
+    animation: rainbow-background 10s infinite; }
 
 h1 {
   font-size: 27px; }
@@ -242,6 +241,9 @@ fieldset {
 
 .hidden {
   display: none !important; }
+
+.error {
+  color: red; }
 
 .rainbow-color {
   -webkit-animation: rainbow-color 1s infinite;
@@ -330,3 +332,8 @@ fieldset {
   font-family: 'font-3';
   font-size: 40px;
   padding: 10px 40px; }
+
+#input10 input {
+  margin: 5px auto;
+  width: 200px;
+  display: block; }
