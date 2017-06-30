@@ -16,6 +16,7 @@
   "homepage": "https://signup-from-bandname.github.io/signup-from-hell",
   "devDependencies": {
     "jquery": "^3.2.1",
+    "jquery-ui-dist": "^1.12.1",
     "node-sass": "^4.5.3"
   }
 }

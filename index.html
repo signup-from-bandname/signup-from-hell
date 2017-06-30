@@ -4,14 +4,18 @@
   <meta charset="UTF-8">
   <title>Sign Up From Hell</title>
   <link href="assets/css/base.css" rel="stylesheet" />
+  <link href="node_modules/jquery-ui-dist/jquery-ui.css" rel="stylesheet" />
   <script src="assets/js/captchas.js" type="application/javascript"></script>
   <script src="assets/js/app.js" type="application/javascript"></script>
     <script src="node_modules/jquery/dist/jquery.js"></script>
+    <script src="node_modules/jquery-ui-dist/jquery-ui.js"></script>
     <script>
           $(function() {
             $('body').on('click', function() {
               $('#chrome-download').hide();
             })
+
+            $( "#birthday" ).datepicker();
           })
 
     </script>
@@ -41,22 +45,21 @@
     <div id="input4">
         Straße, Hausnummer
         <input type="text" />
-    </div>
-    <div id="input5">
         <input type="number" class="w-10" />
     </div>
-    <div id="input6">
+    <div id="input5">
         PLZ
         <input type="number" />
     </div>
-    <div id="input7">
+    <div id="input6">
         Ort
-        <input type="text" readonly />
+        <input type="text" minlength="25" />
+    </div>
+    <div id="input7">
+      <label for="birthday">Geburtsdatum</label>
+      <div id="birthday"></div>
     </div>
     <div id="input8">
-        <input type="text" />
-    </div>
-    <div id="input9">
         <input type="text" />
     </div>
   </fieldset>
@@ -70,15 +73,15 @@
       <div class="error hidden">Fehlerhafte Eingabe! - Bitte versuche es noch einmal.</div>
     </div>
   </fieldset>
-
+  <fieldset class="is-it-a-placeholder">
+    <div id="input11">
+      <input type="text" placeholder="abcdefgh" />
+    </div>
+  </fieldset>
   <fieldset>
     Platzhalter letztes fieldset!
   </fieldset>
 
-<fieldset class="is-it-a-placeholder">
-<div id="input11">
-  <input type="text" placeholder="abcdefgh" />
-</div>
-</fieldset>
+
 </body>
 </html>
