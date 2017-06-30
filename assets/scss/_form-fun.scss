@@ -3,6 +3,12 @@
   width: 10px;
 }
 
+.is-it-a-placeholder {
+  ::-webkit-input-placeholder {
+    color: #000;
+  }
+}
+
 .button1 {
   background: darken(#80ff00, 15%);
   border-radius: 15px;

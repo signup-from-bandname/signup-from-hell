@@ -316,6 +316,9 @@ h1 {
   overflow: hidden;
   width: 10px; }
 
+.is-it-a-placeholder ::-webkit-input-placeholder {
+  color: #000; }
+
 .button1 {
   background: #5ab300;
   border-radius: 15px;

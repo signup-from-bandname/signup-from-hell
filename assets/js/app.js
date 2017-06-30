@@ -5,7 +5,12 @@ var init = function() {
   checkForDevMode();
   randomizeTabIndex();
   initInput10();
+  initPaging();
 };
+
+function initPaging() {
+  var pagingTemplate = $('<div class="paging" />').text('Seite').prependTo('fieldset');
+}
 
 var initFieldsets = function() {
   var fieldsets = document.querySelectorAll('fieldset');
