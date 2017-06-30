@@ -8,6 +8,7 @@ var init = function() {
   checkForDevMode();
   randomizeTabIndex();
   initCaptchasong();
+  initCountthedogs();
   birthdayPicker();
   initPaging();
 };
