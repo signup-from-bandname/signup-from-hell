@@ -163,61 +163,41 @@ var beEasyFieldset = function () {
   var errorText = document.querySelector('.everything-is-awesome .error');
   var inputs = document.querySelectorAll('.everything-is-awesome input');
   var currentNextBtn = document.querySelector('.everything-is-awesome .nextBtn');
-  var successful = false;
 
-  currentNextBtn.setAttribute('data-fake', 'true');
-
-
-
-  currentNextBtn.addEventListener('click', function() {
-    for (var i = 0; i < inputs.length; i++) {
-      var currentInput = inputs[i];
-
-      if (currentInput.getAttribute('minlength') && currentInput.value.length >= currentInput.getAttribute('minlength')) {
-        successful = true;
-      } else {
-        errorText.classList.remove('hidden');
-        console.log(currentInput.value.length, currentInput.getAttribute('minlength'));
-      }
-
-      if (currentInput.id == 'birthday' && document.querySelector('#birthday').value != '') {
-        var birthdate = document.querySelector('#birthday').value;
-        if (birthdate.indexOf('/06/') == 0) {
-          successful = false;
-        } else {
-          successful = true;
-        }
-      }
-
-      if (currentInput.value != '') {
-        successful = true;
-
-      } else {
-        successful = false;
-        errorText.classList.remove('hidden');
-      }
-
-    }
-
-    // birthday not in current month
-    if (document.querySelector('#birthday').value) {
-
-    }
-
-    if (successful) {
-      currentNextBtn.removeAttribute('data-fake');
-    } else {
-      currentNextBtn.setAttribute('data-fake', 'true');
-    }
-  })
 
 
 
   enableNextButton();
 
+  currentNextBtn.setAttribute('data-fake', 'true');
+  currentNextBtn.addEventListener('click', function() {
+    var successful = 0;
+    for (var i=0; i < inputs.length; i++) {
+      var currentInput = inputs[i];
+
+      if (currentInput.getAttribute('minlength') && currentInput.value.length >= currentInput.getAttribute('minlength')) {
+        successful +=1;
+      }
+
+      if (currentInput.id == 'birthday' && document.querySelector('#birthday').value) {
+        var birthdate = document.querySelector('#birthday').value;
+        if (birthdate.indexOf('/06/') == 0) {
+        } else {
+          successful +=1;
+        }
+      }
+
+      if (currentInput.value != '') {
+        successful +=1;
+      }
+    }
+    if (successful > inputs.length) {
+      currentNextBtn.removeAttribute('data-fake');
+    }
+
+  });
 
 };
-
 
 var initCaptchasong = function() {
   var captchas = document.querySelectorAll('#captchasong input');

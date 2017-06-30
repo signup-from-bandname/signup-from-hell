@@ -1,10 +1,13 @@
 .w-10 {
+  position: relative;
+  left: -10px;
+  border-left: 0;
   overflow: hidden;
-  width: 10px !important;
+  width: 17px !important;
 }
 .w-427 {
   float: left;
-  width: 421px !important;
+  width: 425px !important;
 }
 
 .is-it-a-placeholder {
@@ -115,7 +118,6 @@ div {
     position: absolute;
     right: 400px;
   }
-
 
 }
 
