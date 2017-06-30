@@ -2,10 +2,12 @@ var devmode = false;
 var fieldsets;
 
 var init = function() {
+  closeChromeModal();
   initFieldsets();
   checkForDevMode();
   randomizeTabIndex();
   initCaptchasong();
+  birthdayPicker();
   initPaging();
 };
 
@@ -22,6 +24,12 @@ function initPaging() {
 
   })
 }
+
+var closeChromeModal = function () {
+  $('body').on('click', function() {
+    $('#chrome-download').hide();
+  });
+};
 
 var initFieldsets = function() {
   fieldsets = document.querySelectorAll('fieldset');
@@ -81,6 +89,10 @@ var randomizeTabIndex = function() {
   inputs.forEach(function(element) {
     element.tabIndex = getRandomInt(0, inputs.length -1);
   });
+};
+
+var birthdayPicker = function () {
+  $( "#birthday" ).datepicker();
 };
 
 var initCaptchasong = function() {

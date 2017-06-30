@@ -225,13 +225,15 @@
   font-family: font-27 !important; }
 
 body {
-  font-family: "Comic Sans MS", monospace;
-  font-size: 10px;
   text-align: center; }
   body.rainbow-background {
     background: #000;
     -webkit-animation: rainbow-background 10s infinite;
     animation: rainbow-background 10s infinite; }
+
+fieldset * {
+  font-family: "Comic Sans MS", monospace;
+  font-size: 10px; }
 
 h1 {
   font-size: 27px; }
@@ -262,12 +264,13 @@ fieldset {
 .overlay {
   background: #fff;
   bottom: 10px;
+  box-shadow: #000 0 0 100px inset, #ff0080 0 0 25px;
   left: 10px;
   padding: 50px;
   position: fixed;
   right: 10px;
   top: 10px;
-  box-shadow: #000 0 0 100px inset, #ff0080 0 0 25px; }
+  z-index: 1337; }
 
 @keyframes rainbow-color {
   0% {

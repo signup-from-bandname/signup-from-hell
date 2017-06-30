@@ -9,58 +9,45 @@
   <script src="assets/js/app.js" type="application/javascript"></script>
     <script src="assets/js/vendor/jquery.js"></script>
     <script src="assets/js/vendor/jquery-ui.js"></script>
-    <script>
-          $(function() {
-            $('body').on('click', function() {
-              $('#chrome-download').hide();
-            })
-
-            $( "#birthday" ).datepicker();
-          })
-
-    </script>
 </head>
 <body class="rainbow-background">
-  <div id="chrome-download" class="overlay">
+  <div id="chrome-download" class="overlay font-24">
     <h1 class="rainbow-color">Ihr Browser ist veraltet!</h1>
-    <p class="font-24">Bitte aktualisieren Sie Ihren Browser, um sich erfolgreich zu registrieren.</p>
+    <p>Bitte aktualisieren Sie Ihren Browser, um sich erfolgreich zu registrieren.</p>
     <a href="http://lmgtfy.com/?q=chrome" class="button1">Download</a>
   </div>
   <h1>Sign up!</h1>
 
   <fieldset>
-    <div id="input1">
+    <div>
       <label for="inputtype1">Name</label>
-      <input type="text" id="inputtype1" placeholder="Vorname" />
+      <input type="text" id="inputtype1" placeholder="Name" />
 
     </div>
-    <div id="input2">
+    <div>
         <label for="inputtype1">Name</label>
-        <input type="text" placeholder="Nachname" class="rainbow-color" />
+        <input type="text" placeholder="Name" class="rainbow-color" />
     </div>
-    <div id="input3">
+    <div>
         <label>E-Mail-Adresse</label>
         <input type="email" />
     </div>
-    <div id="input4">
+    <div>
         Straße, Hausnummer
         <input type="text" />
         <input type="number" class="w-10" />
     </div>
-    <div id="input5">
+    <div>
         PLZ
         <input type="number" />
     </div>
-    <div id="input6">
+    <div>
         Ort
         <input type="text" minlength="25" />
     </div>
-    <div id="input7">
+    <div id="pickit">
       <label for="birthday">Geburtsdatum</label>
       <div id="birthday"></div>
-    </div>
-    <div id="input8">
-        <input type="text" />
     </div>
   </fieldset>
 
@@ -75,7 +62,7 @@
   </fieldset>
 
   <fieldset class="is-it-a-placeholder">
-    <div id="input11">
+    <div>
       <input type="text" placeholder="abcdefgh" />
     </div>
   </fieldset>
