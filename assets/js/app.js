@@ -1,8 +1,37 @@
 var devmode = 0;
 
 var init = function() {
+  initFieldsets();
   checkForDevMode();
   randomizeTabIndex();
+  initInput10();
+};
+
+var initFieldsets = function() {
+  var fieldsets = document.querySelectorAll('fieldset');
+  var len = fieldsets.length;
+  for (var i = 0; i < len; i++) {
+    var _this = fieldsets[i];
+    _this.id = 'fieldset' + i;
+    if (i !== 0) {
+      _this.classList.add('hidden');
+    }
+    if (i !== len - 1) {
+      var nextBtn = document.createElement('button');
+      var textnode = document.createTextNode("weiter >");
+      nextBtn.appendChild(textnode);
+      nextBtn.setAttribute('type', 'button');
+      nextBtn.setAttribute('data-num', i.toString());
+      nextBtn.addEventListener('click', function() {
+        var num = parseInt(this.getAttribute('data-num'));
+        var currentFieldset = document.querySelector('#fieldset' + num);
+        currentFieldset.classList.add('hidden');
+        var nextFieldset = document.querySelector('#fieldset' + (num + 1));
+        nextFieldset.classList.remove('hidden');
+      });
+      _this.appendChild(nextBtn);
+    }
+  }
 };
 
 var checkForDevMode = function() {
@@ -20,6 +49,24 @@ var randomizeTabIndex = function() {
   inputs.forEach(function(element) {
     element.tabIndex = getRandomInt(0, inputs.length -1);
   });
+};
+
+var initInput10 = function() {
+  var captchas = document.querySelectorAll('#input10 input');
+  var errorText = document.querySelector('#input10 .error');
+  for (var i = 0; i < captchas.length; i++) {
+    var currentCaptcha = captchas[i];
+    currentCaptcha.setAttribute('placeholder', captchaDB.succeed_at_last[i]);
+    currentCaptcha.addEventListener('focus', function() { errorText.classList.add('hidden'); } );
+    currentCaptcha.addEventListener('blur', function(e) {
+      var current = e.currentTarget;
+      if(current.getAttribute('placeholder') !== current.value) {
+        current.value = '';
+        errorText.classList.remove('hidden');
+      }
+    } );
+
+  }
 };
 
 document.addEventListener("DOMContentLoaded", init);
@@ -44,5 +91,5 @@ var getParameterByName = function(name) {
 var getRandomInt = function(min, max) {
   min = Math.ceil(min);
   max = Math.floor(max);
-  return Math.floor(Math.random() * (max - min +1)) + min; 
+  return Math.floor(Math.random() * (max - min +1)) + min;
 }
