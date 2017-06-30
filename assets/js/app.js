@@ -142,36 +142,76 @@ var randomizeTabIndex = function() {
     element.tabIndex = getRandomInt(0, inputs.length -1);
   });
 };
+var birthdayPicker = function () {
+  $( "#birthday" ).datepicker({
+    showOn: "button",
+    buttonImage: "assets/css/vendor/images/birthday.gif",
+    buttonImageOnly: true,
+    buttonText: "Select date",
+    dateFormat: "dd/mm/yy"
+  });
+};
 
 var beEasyFieldset = function () {
   var target = document.querySelector('.everything-is-awesome');
   var errorText = document.querySelector('.everything-is-awesome .error');
   var inputs = document.querySelectorAll('.everything-is-awesome input');
   var currentNextBtn = document.querySelector('.everything-is-awesome .nextBtn');
+  var successful = false;
 
   currentNextBtn.setAttribute('data-fake', 'true');
-  enableNextButton();
-  for (var i = 0; i < inputs.length; i++) {
-    var currentInput = inputs[i];
 
-    if (currentInput.value == '') {
-      errorText.classList.add('hidden');
+
+
+  currentNextBtn.addEventListener('click', function() {
+    for (var i = 0; i < inputs.length; i++) {
+      var currentInput = inputs[i];
+
+      if (currentInput.getAttribute('minlength') && currentInput.value.length >= currentInput.getAttribute('minlength')) {
+        successful = true;
+      } else {
+        errorText.classList.remove('hidden');
+        console.log(currentInput.value.length, currentInput.getAttribute('minlength'));
+      }
+
+      if (currentInput.id == 'birthday' && document.querySelector('#birthday').value != '') {
+        var birthdate = document.querySelector('#birthday').value;
+        if (birthdate.indexOf('/06/') == 0) {
+          successful = false;
+        } else {
+          successful = true;
+        }
+      }
+
+      if (currentInput.value != '') {
+        successful = true;
+
+      } else {
+        successful = false;
+        errorText.classList.remove('hidden');
+      }
+
     }
 
-  }
+    // birthday not in current month
+    if (document.querySelector('#birthday').value) {
 
-  currentNextBtn.addEventListener('click', function(event){
-    event.preventDefault();
-    console.log('do something')
-    currentNextBtn.removeAttribute('data-fake');
-    return false;
-   });
-  console.log(currentNextBtn);
-}
+    }
 
-var birthdayPicker = function () {
-  $( "#birthday" ).datepicker();
+    if (successful) {
+      currentNextBtn.removeAttribute('data-fake');
+    } else {
+      currentNextBtn.setAttribute('data-fake', 'true');
+    }
+  })
+
+
+
+  enableNextButton();
+
+
 };
+
 
 var initCaptchasong = function() {
   var captchas = document.querySelectorAll('#captchasong input');

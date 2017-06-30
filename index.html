@@ -40,26 +40,28 @@
         <label for="inputtype1">Name</label>
         <input type="text" placeholder="Name" class="rainbow-color" />
     </div>
-    <div>
-        <label>E-Mail-Adresse</label>
-        <input type="email" />
-    </div>
+
     <div>
         Straße, Hausnummer
         <input type="text" />
         <input type="number" class="w-10" />
     </div>
+    <div id="pickit">
+      <label for="birthday">Geburtsdatum</label>
+      <div id="birthday-calendar"></div>
+      <input type="text" id="birthday" value="" readonly />
+    </div>
     <div>
         PLZ
-        <input type="number" />
+      <input type="number" />
     </div>
     <div>
         Ort
-        <input type="text" minlength="25" />
+      <input type="text" minlength="10" />
     </div>
-    <div id="pickit">
-      <label for="birthday">Geburtsdatum</label>
-      <div id="birthday"></div>
+    <div>
+      <label>E-Mail-Adresse</label>
+      <input type="email" />
     </div>
   </fieldset>
 
