@@ -1,7 +1,10 @@
 var devmode = false;
 var fieldsets;
+var starttime;
+var timerIntervalId;
 
 var init = function() {
+  initTimer();
   closeChromeModal();
   initFieldsets();
   beEasyFieldset();
@@ -72,6 +75,24 @@ var initFieldsets = function() {
       e.preventDefault();
     });
   }
+};
+
+var initTimer = function() {
+  starttime = new Date();
+  var min = document.querySelector('#timer .min');
+  var sec = document.querySelector('#timer .sec');
+  var msec = document.querySelector('#timer .msec');
+
+  var _updateTimer = function() {
+    var now = new Date();
+    var time = new Date(now - starttime);
+    min.innerText = time.getMinutes();
+    sec.innerText = time.getSeconds();
+    msec.innerText = time.getMilliseconds();
+
+  };
+
+  timerIntervalId = setInterval(_updateTimer, 1);
 };
 
 /**

@@ -34,6 +34,16 @@ fieldset {
   color: red;
 }
 
+#timer {
+  font-family: font-28, monospace;
+  font-size: 50px;
+  background-color: black;
+  color: orange;
+  display: inline-block;
+  padding: 20px;
+  border: 3px solid currentColor;
+}
+
 // rainbow all the things
 .rainbow-color {
   -webkit-animation:rainbow-color 1s infinite;

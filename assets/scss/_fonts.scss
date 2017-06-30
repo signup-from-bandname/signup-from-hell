@@ -173,7 +173,13 @@
   font-weight: 400;
 }
 
-@for $i from 1 through 27 {
+@font-face {
+  font-family: 'font-28';
+  src: url('../fonts/Digital7/digital7.ttf') format('truetype');
+  font-weight: 400;
+}
+
+@for $i from 1 through 28 {
   .font-#{$i} {
     font-family: font-#{$i} !important;
   }

@@ -143,6 +143,11 @@
   src: url("../fonts/Shadows_Into_Light/ShadowsIntoLight.ttf") format("truetype");
   font-weight: 400; }
 
+@font-face {
+  font-family: 'font-28';
+  src: url("../fonts/Digital7/digital7.ttf") format("truetype");
+  font-weight: 400; }
+
 .font-1 {
   font-family: font-1 !important; }
 
@@ -224,6 +229,9 @@
 .font-27 {
   font-family: font-27 !important; }
 
+.font-28 {
+  font-family: font-28 !important; }
+
 body {
   text-align: center; }
   body.rainbow-background {
@@ -246,6 +254,15 @@ fieldset {
 
 .error {
   color: red; }
+
+#timer {
+  font-family: font-28, monospace;
+  font-size: 50px;
+  background-color: black;
+  color: orange;
+  display: inline-block;
+  padding: 20px;
+  border: 3px solid currentColor; }
 
 .rainbow-color {
   -webkit-animation: rainbow-color 1s infinite;
