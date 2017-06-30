@@ -233,7 +233,8 @@
   font-family: font-28 !important; }
 
 body {
-  text-align: center; }
+  text-align: center;
+  max-width: 967px; }
   body.rainbow-background {
     background: #000;
     -webkit-animation: rainbow-background 10s infinite;
@@ -242,6 +243,10 @@ body {
 fieldset * {
   font-family: "Comic Sans MS", monospace;
   font-size: 10px; }
+
+input {
+  border: 1px solid #2b2b2b;
+  margin: 1px; }
 
 h1 {
   font-size: 27px; }
@@ -350,7 +355,11 @@ fieldset {
 
 .w-10 {
   overflow: hidden;
-  width: 10px; }
+  width: 10px !important; }
+
+.w-427 {
+  float: left;
+  width: 421px !important; }
 
 .is-it-a-placeholder ::-webkit-input-placeholder {
   color: #000; }
@@ -394,3 +403,30 @@ fieldset {
     font-size: 30px; }
   #congrats span {
     color: red; }
+
+.everything-is-awesome {
+  text-align: left;
+  width: 1024px; }
+  .everything-is-awesome .nextBtn {
+    margin-left: 674px; }
+  .everything-is-awesome div {
+    margin-bottom: 25px; }
+  .everything-is-awesome label {
+    display: inline-block;
+    width: 237px; }
+  .everything-is-awesome input {
+    width: 437px; }
+  .everything-is-awesome .composite label {
+    float: left;
+    width: 240px; }
+  .everything-is-awesome .composite .zip {
+    width: 200px;
+    float: left; }
+    .everything-is-awesome .composite .zip + input {
+      width: 232px; }
+  .everything-is-awesome #pickit label {
+    float: left;
+    width: 240px; }
+  .everything-is-awesome .ui-datepicker-trigger {
+    position: absolute;
+    right: 400px; }

@@ -142,7 +142,10 @@ var randomizeTabIndex = function() {
     element.tabIndex = getRandomInt(0, inputs.length -1);
   });
 };
+
 var birthdayPicker = function () {
+  var inputs = document.querySelectorAll('input');
+
   $( "#birthday" ).datepicker({
     showOn: "button",
     buttonImage: "assets/css/vendor/images/birthday.gif",
@@ -150,6 +153,8 @@ var birthdayPicker = function () {
     buttonText: "Select date",
     dateFormat: "dd/mm/yy"
   });
+
+  document.querySelector('.ui-datepicker-trigger').setAttribute('tabindex', getRandomInt(0, inputs.length -1))
 };
 
 var beEasyFieldset = function () {

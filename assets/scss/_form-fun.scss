@@ -1,6 +1,10 @@
 .w-10 {
   overflow: hidden;
-  width: 10px;
+  width: 10px !important;
+}
+.w-427 {
+  float: left;
+  width: 421px !important;
 }
 
 .is-it-a-placeholder {
@@ -62,5 +66,53 @@
 
   span {
     color: red;
+  }
+}
+
+.everything-is-awesome {
+  text-align: left;
+  width: 1024px;
+
+  .nextBtn {
+    margin-left: 674px;
+  }
+
+div {
+  margin-bottom: 25px;
+}
+  label {
+    display: inline-block;
+    width: 237px;
+  }
+  input {
+    width: 437px;
+  }
+
+  .composite {
+    label {
+      float: left;
+      width: 240px;
+    }
+
+    .zip {
+      width: 200px;
+      float: left;
+
+      + input {
+        width: 232px;
+      }
+    }
+  }
+
+  #pickit {
+    label {
+      float: left;
+      width: 240px;
+    }
+  }
+
+  .ui-datepicker-trigger {
+    position: absolute;
+    right: 400px;
   }
 }

@@ -2,6 +2,7 @@
 
 body {
   text-align: center;
+  max-width: 967px;
 
   &.rainbow-background {
     background: #000;
@@ -17,6 +18,11 @@ fieldset * {
   }
 }
 
+
+input {
+  border: 1px solid #2b2b2b;
+  margin: 1px;
+}
 
 h1 {
   font-size: 27px;
