@@ -20,8 +20,10 @@ var initFieldsets = function() {
       var nextBtn = document.createElement('button');
       var textnode = document.createTextNode("weiter >");
       nextBtn.appendChild(textnode);
+      nextBtn.classList.add('nextBtn');
       nextBtn.setAttribute('type', 'button');
       nextBtn.setAttribute('data-num', i.toString());
+      nextBtn.setAttribute('disabled', 'disabled');
       nextBtn.addEventListener('click', function() {
         var num = parseInt(this.getAttribute('data-num'));
         var currentFieldset = document.querySelector('#fieldset' + num);
@@ -67,6 +69,14 @@ var initInput10 = function() {
     } );
 
   }
+};
+
+/**
+ * Funktion um vom aktuell aktiven Fieldset den "Weiter"-Button freizuschalten.
+ */
+var enableNextButton = function() {
+  var currentNextBtn = document.querySelector("fieldset:not(.hidden) .nextBtn");
+  currentNextBtn.removeAttribute('disabled');
 };
 
 document.addEventListener("DOMContentLoaded", init);
