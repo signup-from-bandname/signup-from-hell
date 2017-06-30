@@ -11,6 +11,16 @@ var init = function() {
 
 function initPaging() {
   var pagingTemplate = $('<div class="paging" />').text('Seite').prependTo('fieldset');
+  $(fieldsets).each(function(index) {
+    var count = index,
+      fieldset = $(this),
+      paginator = fieldset.find('.paging'),
+      current = count + 1,
+      final = count +2;
+
+    paginator.text('Seite ' + current + ' von ' + final);
+
+  })
 }
 
 var initFieldsets = function() {
