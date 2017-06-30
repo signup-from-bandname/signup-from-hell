@@ -430,3 +430,17 @@ fieldset {
   .everything-is-awesome .ui-datepicker-trigger {
     position: absolute;
     right: 400px; }
+
+#terms .dont-overflow {
+  height: 40px;
+  width: 1000px;
+  text-align: left;
+  overflow: scroll;
+  white-space: nowrap; }
+  #terms .dont-overflow p {
+    font-family: font-20;
+    font-size: 13px;
+    display: inline; }
+
+#fieldset2 .nextBtn {
+  float: left; }

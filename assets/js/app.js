@@ -15,6 +15,7 @@ var init = function() {
   birthdayPicker();
   initNummernCode();
   initPaging();
+  acceptTerms();
 };
 
 function initPaging() {
@@ -242,6 +243,14 @@ var initCaptchasong = function() {
   }
 };
 
+var acceptTerms = function () {
+  var termGroup = document.querySelector('#terms div');
+  var termCheckbox = document.querySelector('#terms input[type="checkbox"]');
+
+  termCheckbox.addEventListener('click', function() {
+    enableNextButton()
+  })
+}
 var initNummernCode = function() {
   var opPlus = document.querySelector('#nummernCode .operator .plus');
   var opMinus = document.querySelector('#nummernCode .operator .minus');
